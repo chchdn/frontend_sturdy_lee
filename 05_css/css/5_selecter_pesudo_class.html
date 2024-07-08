@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+/* 1. 어떠한 행동을 했을 때 동작하는 / 가상 클래스 선택자*/
+/* :hover는 마우스커서를 올렸을때  */
+a:hover{
+  color:orange;
+}
+.box{
+  width:100px;
+  height:100px;
+  background-color: orange;
+  /*트렌지션 애니메이션 .. */
+  transition: 0.5s;
+}
+/*
+.box:hover{
+  width:200px;
+  height:200px;
+  background-color: cadetblue;
+}
+ */ 
+    /* :active (마우스를 클릭하고 있는 동안 선택) */
+    /* 모바일에서 :hover 대신에 꼼수로 사용 */
+    /* 버튼을 누르는 효과를 줄 때 잘 활용한 예시(보통은 버튼 색상만 변경): https://codepen.io/jooing/pen/jOMybXY */
+a:active{
+  color:greenyellow;
+}
+.box:active{
+  width:300px;
+  background-color:deeppink;
+}
+ /* :focus 요소가 활성화 되면 선택 */
+ /* HTML 대화형 요소에 사용 가능 브라우저에서 TAP키를 눌러보면 가능한 요소 확인가능
+    예: input, a, button, label, select, textarea 등
+ */
+/* 더 많은 요소를 찾고 싶다면 html 대화형 콘텐츠 mdn을 구글링 하자*/
+/*nth-child(2n)이건 0부터 시작되어 선택자 지정 +1하면 3부터 시작같은.. */
+
+input:focus{
+  background-color: lightcoral;
+  color:#fff;
+}
+
+/* 2. 특정한 요소를 선택하는 가상 클래스 선택자 */
+/* :first-child 첫번쨰 자식요소
+    :last-child 마지막 자식요소
+*/
+
+/*div class의 첫 자식요소 선택 span을 지워도 마찬가지*/
+.fruits span:first-child{
+  color:mediumvioletred;
+}
+
+
+/* .fruits h3:last-child{
+  color:red;
+} */
+
+/*nth-child(n)* n번째 자식요소를 선택하는것*/
+
+/*짝수*/
+/* .fruits *:nth-child(2n){
+  color:blueviolet;
+} */
+
+/*홀수*/
+/* .fruits *:nth-child(2n+1){
+  color:blueviolet;
+} */
+
+/*두번째 자식부터 모두 다 선택                                                                                         */
+.fruits *:nth-child(n+2){
+  color:blueviolet;
+}
+
+
+</style>
+
+
+</head>
+<body>
+  
+<a href="https://www.naver.com/">NAVER</a>
+<div class="box"></div>
+
+<hr>
+
+<input type="text">
+
+<hr>
+
+<div class="fruits">
+  <span>딸기</span>
+  <span>수박</span>
+  <div>오렌지</div>
+  <p>망고</p>
+  <h3>사과</h3>
+</div>
+
+
+
+</body>
+</html>

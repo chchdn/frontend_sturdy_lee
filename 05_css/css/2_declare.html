@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>css의기본</title>
+  <!--1. 권장방식 외부 스타일 시트 , 링크 방식-->
+  <!-- link rel의 href="주소는" main.css를 통째로 끌어오는것  -->
+  
+  <link rel="stylesheet" href="/05_css/box.css">
+  <!-- 2. 내부 스타일 시트 / 내장방식 권장X 별도의 CSS파일을 만들지 않고 적용하나... 나중에 보기/찾기/수정하기 힘듦어짐
+  여러페이지에 그 CSS스타일을 같은걸 쓰는데 해당 CSS속성을 쓰는 모든 문서마다 다 바꿔줘야 해서 매우 좋지 않음. 
+  -->
+<style>
+  div{
+    color:darkorange;
+    margin:20px;
+  }
+</style>
+
+
+</head>
+<body>
+  <!--3. 인라인 스타일 태그안에 넣느 스타일 방식.. css파일을 없이 사용가능하나.... 이것도 후에 일일이 찾아야되서 권장하지않음
+      우선순위도 높아서 link된 css를 씹어먹는일이 생김
+  -->
+  <div style="color: olivedrab;" class="box">오늘 인천은 흐림</div>
+</body>
+</html>

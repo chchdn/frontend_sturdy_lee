@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+/*기본 선택자 4가지*/
+/*1. 전체 선택자: 모든 요소/태그를 선택*/
+/* 사용 예
+  - 단독: 스타일 초기화시 사용 color font-size font-family등 공통 스타일을 적용할때
+  - 복합: 어떤 범위 안에 모든 요소를 선택할 때
+  */
+/* *{
+color:darkcyan;
+} */
+/*태그 선택자: 태그 이름으로 선택*/
+/*3.클래스 선택자: class 속성의 값으로 선택*/
+/*4.아이디 선택자 id 속성의 값으로 선택*/
+#orange{
+  color:orange;
+}
+/*순서는 전체->태그->클래스->아이디로 기억 -우선순위
+  오른쪽으로 갈수록 구체적인/명확한 선택자.
+*/
+/*태그선택 다중선택자에서는 태그..가 가장 앞에 나와야함*/
+/*자식선택자 ul > .orange 식으로 선택*/
+/*div .orange  div의 하위요소에 .orange만 선택하라는 뜻*/
+/*.orange + li 오렌지 클래스의 인접한 li를 선택하라는 뜻이 + 임*/
+/*선택자 + 선택자 일시 선택자 뒤의 인접한 선택자를 선택하여 스타일을 바꾼다는 뜻*/
+/*.orange ~ li 오렌지 클래스의 아래 있는 li요소를 선택하라는 뜻*/
+</style>
+
+
+</head>
+<body>
+  <div>
+    <ul>
+    <li>사과</li>
+    <li>딸기</li>
+    <li id="orange" class="orange">오렌지</li>
+    </ul>
+<div>당근</div>
+<p>토마토</p>
+<span class="orange">오렌지</span>
+  </div>
+</body>
+</html>
